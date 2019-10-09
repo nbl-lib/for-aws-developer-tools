@@ -7,7 +7,7 @@ phases:
   build:
     commands:
       - echo Build started  
-      - dotnet publish -c release -o ./build_output .\CoreWebApp\WebApp\WebApp.csproj\WebApp.csproj
+      - dotnet publish -c release 
 artifacts:
   files:
   - .\CoreWebApp\WebApp\bin\Debug\netcoreapp2.2\*
