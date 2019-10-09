@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+pre_build:
+commands:
+- echo Restore started 
+- dotnet restore WebApp.csproj
+build:
+commands:
+- echo Build started  
+- dotnet publish -c release -o ./build_output WebApp.csproj
+artifacts:
+files:
+- CodeBuild-WebApp/build_output/**/*
+- scripts/**/*
