@@ -3,7 +3,7 @@ phases:
   pre_build:
     commands:
       - echo Restore started 
-      - dotnet restore WebApp.csproj
+      - dotnet restore .\CoreWebApp\WebApp\WebApp.csproj
   build:
     commands:
       - echo Build started  
