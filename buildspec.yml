@@ -6,8 +6,8 @@ phases:
       - dotnet restore .\CoreWebApp\WebApp\WebApp.csproj
   build:
     commands:
-      - echo Build started  
+      - echo Build started   
       - dotnet publish --configuration Release 
 artifacts:
   files:
-  - .\CoreWebApp\WebApp\bin\release\netcoreapp2.2\publish\*.*
+  - .\CoreWebApp\WebApp\bin\release\netcoreapp2.2\publish\**\*
