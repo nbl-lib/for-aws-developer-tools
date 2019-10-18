@@ -10,4 +10,4 @@ phases:
       - dotnet publish -c release 
 artifacts:
   files:
-  - .\CoreWebApp\WebApp\bin\Release\netcoreapp2.2\publish\*.*
+  - .\CoreWebApp\WebApp\build_output\*.*
