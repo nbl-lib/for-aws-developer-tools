@@ -8,3 +8,6 @@ phases:
     commands:
       - echo Build started  
       - dotnet publish -c release 
+artifacts:
+  files:
+  - .\CoreWebApp\WebApp\bin\Release\netcoreapp2.2\publish\*
