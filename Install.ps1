@@ -5,7 +5,7 @@ mkdir c:\website-published
 Set-Location C:\website-dropfolder   
 
 # Restore the nuget references
-& "C:\Program Files\dotnet\dotnet.exe" restore
+& "C:\Program Files (x86)\dotnet\dotnet.exe" restore
 
 # Publish application with all of its dependencies and runtime for IIS to use
 & "C:\Program Files\dotnet\dotnet.exe" publish --configuration release -o c:\website-published --runtime active
