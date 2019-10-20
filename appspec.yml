@@ -24,7 +24,7 @@ os: windows
 #   may cause associated deployments to fail.
 files:
   - source: \
-    destination: c:\LatestRevision
+    destination: c:\website-dropfolder
   
 # For deployments to Amazon Linux, Ubuntu Server, or RHEL instances,
 #   you can specify a "permissions" 
