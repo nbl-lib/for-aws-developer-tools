@@ -5,17 +5,18 @@ mkdir c:\website-published
 Set-Location C:\website-dropfolder   
 
 # Restore the nuget references
-& "C:\Program Files (x86)\dotnet\dotnet.exe" restore
+& "C:\Program Files\dotnet\dotnet.exe" restore  -ErrorAction SilentlyContinue
 
 # Publish application with all of its dependencies and runtime for IIS to use
-& "C:\Program Files\dotnet\dotnet.exe" publish --configuration release -o c:\website-published --runtime active
+& "C:\Program Files\dotnet\dotnet.exe" publish --configuration release -o c:\website-published --runtime active  -ErrorAction SilentlyContinue
 
 # Create an IIS website and point it to the published folder
-New-WebSite -Name CoreWebsite -Port 80 -HostHeader CoreWebsite -PhysicalPath "$env:systemdrive\website-published"
+New-WebSite -Name CoreWebsite -Port 80 -HostHeader CoreWebsite -PhysicalPath "$env:systemdrive\website-published"  -ErrorAction SilentlyContinue
 
 # Create AppPool for website and set CLR version to core-dotnet
-New-WebAppPool CoreWebsiteAppPool
-Set-ItemProperty IIS:\\AppPools\CoreWebsiteAppPool managedRuntimeVersion "" -verbose
+New-WebAppPool CoreWebsiteAppPool  -ErrorAction SilentlyContinue
+Set-ItemProperty IIS:\\AppPools\CoreWebsiteAppPool managedRuntimeVersion "" -verbose  -ErrorAction SilentlyContinue
+
 
 # Point IIS wwwroot of the published folder. CodeDeploy uses 32 bit version of PowerShell.
 # To make use the IIS PowerShell CmdLets we need call the 64 bit version of PowerShell.
