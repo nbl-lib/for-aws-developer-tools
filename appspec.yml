@@ -59,7 +59,7 @@ hooks:
 #    - location: .\RemoveApp.ps1
 #      timeout: 30
   ApplicationStart:
-    - location: .\InstallApp.ps1
+    - location: .\Install.ps1
       timeout: 300
       runas: Administrator
 
