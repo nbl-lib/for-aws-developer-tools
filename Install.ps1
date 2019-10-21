@@ -32,7 +32,7 @@ Set-Location C:\website-dropfolder
 & "C:\Program Files\dotnet\dotnet.exe" restore   
 
 # Publish application with all of its dependencies and runtime for IIS to use
-& "C:\Program Files\dotnet\dotnet.exe" publish --configuration release -o c:\website-published --runtime active  
+& "C:\Program Files\dotnet\dotnet.exe" publish --configuration release -o c:\website-published   
 
 # Create an IIS website and point it to the published folder
 #New-WebSite -Name CoreWebsite -Port 80 -HostHeader CoreWebsite -PhysicalPath "$env:systemdrive\website-published"  
