@@ -24,15 +24,19 @@ Write-Warning "Original arguments (if any): $args"
 
 # Create folder to publish binaries from drop folder
 mkdir c:\website-published
+Set-Location c:\website-published
+delete *.*
 
 # Switch to drop folder
 Set-Location C:\website-dropfolder   
 
 # Restore the nuget references
-& "C:\Program Files\dotnet\dotnet.exe" restore   
+#& "C:\Program Files\dotnet\dotnet.exe" restore   
 
 # Publish application with all of its dependencies and runtime for IIS to use
-& "C:\Program Files\dotnet\dotnet.exe" publish --configuration release -o c:\website-published   
+#& "C:\Program Files\dotnet\dotnet.exe" publish --configuration release -o c:\website-published   
+
+
 
 # Create an IIS website and point it to the published folder
 #New-WebSite -Name CoreWebsite -Port 80 -HostHeader CoreWebsite -PhysicalPath "$env:systemdrive\website-published"  
