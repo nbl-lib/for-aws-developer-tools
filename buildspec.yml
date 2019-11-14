@@ -12,3 +12,4 @@ artifacts:
   files:
   - .\CoreWebApp\WebApp\bin\release\netcoreapp2.2\publish\**\*
   - appspec.yml
+  - Install.ps1
