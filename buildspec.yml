@@ -10,6 +10,6 @@ phases:
       - dotnet publish --configuration Release -o build-output
 artifacts:
   files:
-  - .\build-output\*
+  - .\build-output\**\*
   - appspec.yml
   - Install.ps1
