@@ -22,10 +22,10 @@ Write-Warning "  (\SysWOW64\ = 32-bit mode, \System32\ = 64-bit mode)"
 Write-Warning "Original arguments (if any): $args"
 
 #Delete publish Folder if its exists while ignoring any folder-not-found errors
-Remove-Item C:\website-published -Recurse -ErrorAction Ignore
+#Remove-Item C:\website-published -Recurse -ErrorAction Ignore
 
 # Create folder to publish binaries from drop folder
-mkdir c:\website-published
+#mkdir c:\website-published
 
 # Switch to drop folder
 Set-Location C:\website-dropfolder   
