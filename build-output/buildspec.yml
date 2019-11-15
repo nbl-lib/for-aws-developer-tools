@@ -7,9 +7,8 @@ phases:
   build:
     commands:
       - echo Build started   
-      - dotnet publish --configuration Release -o build-output
+      - dotnet publish --configuration Release 
 artifacts:
   files:
-  - .\build-output\*
+  - .\CoreWebApp\WebApp\bin\release\netcoreapp2.2\publish\**\*
   - appspec.yml
-  - Install.ps1
