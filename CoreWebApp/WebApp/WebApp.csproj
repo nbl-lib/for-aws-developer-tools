@@ -22,9 +22,6 @@
 
 
   <ItemGroup>
-    <None Update="appspec.yml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="buildspec.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
