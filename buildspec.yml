@@ -13,3 +13,4 @@ artifacts:
   - .\build-output\**\*
   - appspec.yml
   - Install.ps1
+  - Cleanup.ps1

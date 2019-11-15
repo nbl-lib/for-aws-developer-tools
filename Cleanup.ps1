@@ -1,0 +1,1 @@
+Remove-Item C:\website-published -Recurse -ErrorAction Ignore
