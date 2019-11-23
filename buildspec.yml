@@ -8,6 +8,8 @@ phases:
     commands:
       - echo Build started   
       - dotnet publish --configuration Release -o .\build-output
+      - dotnet publish --configuration Release -o ..\..\build-output
+      - dotnet publish --configuration Release -o \build-output
 artifacts:
   files:
   - .\build-output\**\*
