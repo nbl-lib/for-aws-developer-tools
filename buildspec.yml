@@ -7,8 +7,6 @@ phases:
   build:
     commands:
       - echo Build started   
-      - echo Current Directory is
-      - cd
       - dotnet publish --configuration Release -o \build-output
      
 artifacts:
